@@ -1,0 +1,33 @@
+ESTADÍSTICAS DE JUEGO - paquete para Android
+=============================================
+Contenido: index.html (la app), manifest.webmanifest, sw.js (funciona sin conexión) e iconos con el escudo.
+Los datos se guardan en cada móvil. No hay base de datos compartida en esta versión.
+
+1) PUBLICAR LA APP EN INTERNET (necesario, con https)
+   - Entra en app.netlify.com/drop y arrastra esta carpeta (sin comprimir).
+   - Te da una dirección web. Ábrela en Chrome del móvil: menú ⋮ > "Instalar app" o "Añadir a pantalla de inicio".
+     Con eso ya funciona como app, sin APK.
+
+2) CREAR EL APK (opcional)
+   - Entra en pwabuilder.com, pega la dirección web y sigue la opción de paquete para Android.
+   - Descarga el paquete: incluye el APK. Para instalarlo directamente en los móviles hay que permitir
+     "instalar apps de orígenes desconocidos".
+   - Guarda bien el archivo de clave (keystore) que se genera: se necesita para futuras actualizaciones.
+
+3) GOOGLE PLAY (opcional)
+   - Cuenta de desarrollador de Google Play (pago único) y una política de privacidad:
+     la app guarda nombres y fotos de menores.
+
+COPIAS DE SEGURIDAD (importante)
+   - Inicio > "Copia de seguridad" > Exportar copia: genera un archivo .json (se comparte por WhatsApp, Drive, etc.).
+   - Importar archivo o pegar el texto y pulsar Restaurar: recupera todo (reemplaza lo que haya).
+   - En Stats y en Historial, el botón CSV exporta los datos para Excel.
+   - Si borras los datos del navegador o desinstalas la app, se pierden los datos: exporta con frecuencia.
+
+PASAR LOS DATOS DE LA VERSIÓN DE CLAUDE A LA APP
+   - En la versión de Claude: Inicio > Exportar copia > Copiar texto.
+   - En la app nueva: Inicio > pega el texto > Restaurar.
+
+ACTUALIZAR LA APP
+   - Sustituye index.html en Netlify y cambia el número de versión V en sw.js (por ejemplo eg-v2)
+     para que los móviles descarguen la versión nueva.
